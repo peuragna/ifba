@@ -32,6 +32,6 @@ public class Gene{
     public String toString(){
         return "Valor: " + this.getValor();
         //return Integer.toString(this.getValor());
-    }
+    };
     
 }
