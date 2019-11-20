@@ -52,7 +52,7 @@ public class Cromossomo{
     public Cromossomo cruzamento(Cromossomo outro, int ponto){
         Cromossomo novo = new Cromossomo(outro.genes.length);
         
-        for(int i = 0; i < novo.genes.length - ponto; i++)
+        for(int i = 0; i < ponto; i++)
             novo.setGene(i, this.getGene(i).getValor());
             
         for(int i = ponto; i < novo.genes.length; i++)

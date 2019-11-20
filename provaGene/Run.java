@@ -1,7 +1,7 @@
 public class Run{
-    private final int TAM1 = 7;
-    private final int TAM2 = 6;
-    private final int PONTO = 3;
+    private final int TAM1 = 5;
+    private final int TAM2 = 4;
+    private final int PONTO = 2;
     
     Cromossomo cromosso1 = new Cromossomo(TAM1);
     Cromossomo cromosso2 = new Cromossomo(TAM2);
