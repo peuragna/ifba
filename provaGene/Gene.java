@@ -1,8 +1,6 @@
 public class Gene{
     private int valor;
     
-    //Construtores
-    
     public Gene(int valor){
         this.setValor(valor); 
     };
@@ -14,9 +12,7 @@ public class Gene{
     public Gene(){
         this(1);
     };
-    
-    //Standard
-        
+      
     public void setValor(int valor){
         this.valor = valor;
     };
@@ -30,16 +26,11 @@ public class Gene{
     };
     
       public String toString(){
-        return "Valor: " + this.getValor();
+        return "(" + this.getValor() + ")";
         //return Integer.toString(this.getValor());
     };
-    
-    //Extra
-    
+   
     public Gene clonar(){
         return new Gene(this);
-    };
-    
-
-    
+    };   
 }

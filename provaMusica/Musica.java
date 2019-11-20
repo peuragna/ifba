@@ -6,8 +6,6 @@ public class Musica{
     private String genero;
     private String nomeGravadora;
     
-    //Construtor
-    
     public Musica(String titulo, String genero, String nomeGravadora, 
                   String[] listaArtistas, Campo campo, double duraçao){
                       this.setTitulo(titulo);
@@ -17,8 +15,6 @@ public class Musica{
                       this.setCampo(campo);
                       this.setDuraçao(duraçao);
     };
-    
-    //Setters
     
     private void setTitulo(String titulo){
         this.titulo = titulo;  
@@ -43,9 +39,7 @@ public class Musica{
     private void setDuraçao(double duraçao){
         this.duraçao = duraçao; 
     };
-    
-    //Getters
-    
+   
     public String getTitulo(){
         return this.titulo;
     };
@@ -70,8 +64,6 @@ public class Musica{
         return this.duraçao;
     };
     
-    //Equals
-    
     public boolean comparar(String[] outraLista){
         int count=0;
         
@@ -93,9 +85,7 @@ public class Musica{
         }else if(this.comparar(outra.listaArtistas) && outra.comparar(this.listaArtistas))
             return true;
             else return false;
-    };
-    
-    //Proximidade   
+    }; 
     
     public float calcularProximidade(Musica outra){
         float proximidade = 0f;
@@ -131,6 +121,5 @@ public class Musica{
         }
         
         return count; 
-    };
-    
+    };  
 }

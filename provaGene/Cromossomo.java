@@ -42,40 +42,24 @@ public class Cromossomo{
     }; 
     
     public void cruzar(Cromossomo outro, int ponto){
-            Cromossomo novo = new Cromossomo(outro.genes.length);
-            Cromossomo novo2 = new Cromossomo(this.genes.length);
-            
-            if(this.genes.length <= outro.genes.length){
-                for(int i = 0; i < this.genes.length - ponto; i++)
-                    novo.setGene(i, this.getGene(i).getValor());
-                    
-                for(int i = ponto; i < novo.genes.length; i++)
-                   novo.setGene(i, outro.getGene(i).getValor());
-                   
-                for(int i = 0; i < this.genes.length - ponto; i++)
-                    novo2.setGene(i, outro.getGene(i).getValor());
-                    
-                for(int i = ponto; i < novo2.genes.length; i++)
-                    novo2.setGene(i, this.getGene(i).getValor());
-                    
-                this.genes = novo.genes;    
-                outro.genes = novo2.genes;
-            }else{
-                for(int i = 0; i < outro.genes.length - ponto; i++)
-                    novo.setGene(i, this.getGene(i).getValor());
-                    
-                for(int i = ponto; i < novo.genes.length; i++)
-                    novo.setGene(i, outro.getGene(i).getValor());
-                
-                for(int i = 0; i < this.genes.length - ponto; i++)
-                    novo2.setGene(i, outro.getGene(i).getValor());
-                    
-                for(int i = ponto; i < novo2.genes.length; i++)
-                    novo2.setGene(i, this.getGene(i).getValor());
-                
-                this.genes = novo.genes;    
-                outro.genes = novo2.genes;
-            }
-            
+        Cromossomo aux = new Cromossomo(this.genes.length);
+        
+        aux.genes = this.cruzamento(outro, ponto).genes;
+        outro.genes = outro.cruzamento(this, ponto).genes;
+        this.genes = aux.genes;
     };
-}
+    
+    public Cromossomo cruzamento(Cromossomo outro, int ponto){
+        Cromossomo novo = new Cromossomo(outro.genes.length);
+        
+        for(int i = 0; i < novo.genes.length - ponto; i++)
+            novo.setGene(i, this.getGene(i).getValor());
+            
+        for(int i = ponto; i < novo.genes.length; i++)
+            novo.setGene(i, outro.getGene(i).getValor());
+            
+        return novo;   
+    };
+}   
+
+ 

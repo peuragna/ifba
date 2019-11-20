@@ -6,4 +6,4 @@ enum Campo{
     G,
     A,
     B
-}
+};

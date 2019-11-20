@@ -12,4 +12,6 @@ comment5.params=outro
 comment5.target=float\ calcularSimilaridade(Cromossomo)
 comment6.params=outro\ ponto
 comment6.target=void\ cruzar(Cromossomo,\ int)
-numComments=7
+comment7.params=outro\ ponto
+comment7.target=Cromossomo\ cruzamento(Cromossomo,\ int)
+numComments=8
