@@ -6,4 +6,6 @@ comment2.params=alelo\ valor
 comment2.target=void\ setGene(int,\ int)
 comment3.params=alelo
 comment3.target=Gene\ buscarGene(int)
-numComments=4
+comment4.params=
+comment4.target=Cromossomo\ clonar()
+numComments=5

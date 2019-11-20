@@ -18,9 +18,9 @@ public class Cromossomo{
       
         int i;
         for(i = 0; i < this.genes.length; i++)
-            novo[i] = new Gene(this.genes[i].getValor);
+            novo.setGene(i, this.genes[i].getValor());// = new Gene(this.genes[i].getValor());
             
-        
+        return novo;
     };
    
 }
