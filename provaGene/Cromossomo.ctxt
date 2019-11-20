@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Cromossomo
+comment1.params=qtdGenes
+comment1.target=Cromossomo(int)
+comment2.params=alelo\ valor
+comment2.target=void\ setGene(int,\ int)
+comment3.params=alelo
+comment3.target=Gene\ buscarGene(int)
+numComments=4
