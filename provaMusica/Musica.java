@@ -24,7 +24,7 @@ public class Musica{
         this.genero = genero;
     };
     
-    private void setNomeGravadora(String NomeGravadora){
+    private void setNomeGravadora(String nomeGravadora){
         this.nomeGravadora = nomeGravadora; 
     };
     
@@ -90,11 +90,11 @@ public class Musica{
     public float calcularProximidade(Musica outra){
         float proximidade = 0f;
         
-        if(this.campo == outra.campo)
+        if(this.getCampo() == outra.getCampo())
             proximidade += 1f;
-        if(this.nomeGravadora.equals(outra.nomeGravadora))
+        if(this.getNomeGravadora().equals(outra.getNomeGravadora()))
             proximidade += 1f;
-        if(this.genero.equals(outra.genero))
+        if(this.getGenero().equals(outra.getGenero()))
             proximidade += 1f;
         if(this.equals(outra)){
             proximidade += 1f;
@@ -103,14 +103,14 @@ public class Musica{
         return proximidade;
     };   
     
-    public float calcularPorcentagem(Musica outra){
+    private float calcularPorcentagem(Musica outra){
           float qtdArtistas = this.listaArtistas.length + outra.listaArtistas.length;
           float artistasCoincidentes = this.compararCount(outra.listaArtistas) + outra.compararCount(this.listaArtistas);
           
           return qtdArtistas/artistasCoincidentes;
     };
     
-     public float compararCount(String[] outraLista){
+    public float compararCount(String[] outraLista){
         int count=0;
         
         for(String artistas : this.listaArtistas){
