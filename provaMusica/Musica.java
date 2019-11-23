@@ -1,8 +1,8 @@
 public class Musica{
-    private String titulo;
     private double duraçao;
     private Campo campo;
     private String[] listaArtistas;
+    private String titulo;
     private String genero;
     private String nomeGravadora;
     
@@ -76,7 +76,9 @@ public class Musica{
         
         if(count == this.listaArtistas.length){
             return true;
-        }else return false;
+        }else{
+            return false;
+        }
     };
     
     public boolean equals(Musica outra){
@@ -98,8 +100,9 @@ public class Musica{
             proximidade += 1f;
         if(this.equals(outra)){
             proximidade += 1f;
-        }else proximidade += this.calcularPorcentagem(outra);
-        
+        }else{
+            proximidade += this.calcularPorcentagem(outra);
+        }
         return proximidade;
     };   
     
@@ -119,7 +122,6 @@ public class Musica{
                     count++;
             }
         }
-        
         return count; 
     };  
 }

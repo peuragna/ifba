@@ -25,9 +25,8 @@ public class Gene{
         return this.getValor() == outro.getValor();
     };
     
-      public String toString(){
+    public String toString(){
         return "(" + this.getValor() + ")";
-        //return Integer.toString(this.getValor());
     };
    
     public Gene clonar(){

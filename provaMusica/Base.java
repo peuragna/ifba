@@ -8,8 +8,4 @@ public class Base{
     public Base(){
         this(1);
     };
-    
-  
- 
-    
 }
