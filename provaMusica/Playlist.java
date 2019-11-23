@@ -65,12 +65,15 @@ public class Playlist{
     
     public int getIndiceMusicaMaisProxima(Playlist outra){
         double[] proximidades = new double[this.musicas.length];
+        double proximidade = 0;
         double maior = 0;
         int indice = 0;
         
-        for(int i = 0; i < this.musicas.length; i++)
-            for(Musica outraMusica : outra.musicas)
-                proximidades[i] = this.getMusica(i).calcularProximidade(outraMusica);
+        for(int i = 0; i < outra.musicas.length; i++)
+            for(Musica thisMusica : this.musicas){
+                if(proximidade < outra.getMusica(i).calcularProximidade(thisMusica))
+                     proximidades[i] = proximidade;
+            } 
                
         for(int i = 0; i < proximidades.length; i++){
             if(proximidades[i] > maior){
