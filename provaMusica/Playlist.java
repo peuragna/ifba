@@ -27,8 +27,26 @@ public class Playlist{
         this.musicas = aux;
     };
     
+    public void removeMusica(int indice){
+        this.musicas[indice] = null;
+    }
+    
     public Playlist gerarPlaylist(Playlist outra, String nome, double duraçao){
-        Playlist[] novaPlaylist = this(1); //NAO É ARRAY DE PLAYLIST
+        int indice;
+        Playlist novaPlaylist = new Playlist();
+        
+        while(duraçao > 0){
+            indice = this.getMusicaProxima(outra);
+            novaPlaylist.addMusica(outra.getMusica(indice));
+            duraçao = duraçao - outra.getMusica(indice).getDuraçao();
+            
+            outra.removeMusica(indice);
+        }
+        
+        return novaPlaylist; 
+    };
+    
+    public int getMusicaProxima(Playlist outra){
         double[] proximidades = new double[this.musicas.length];
         double maior = 0;
         int indice = 0;
@@ -43,17 +61,6 @@ public class Playlist{
                 indice = i;
             }
             
-        if(duraçao > 0){
-            novaPlaylist.addMusica(outra.getMusica(indice));
-            
-            
-            
-        }
-        
-            
-        
+        return indice;
     };
-    
-   
-    
 }
