@@ -54,7 +54,7 @@ public class Playlist{
         int indice;
         Playlist novaPlaylist = new Playlist(1, nome);
         
-        while(duraçao > 0){
+        while(duraçao > 0 && outra.musicas.length > 0){
             indice = this.getIndiceMusicaMaisProxima(outra);
             novaPlaylist.addMusica(outra.getMusica(indice));
             duraçao = duraçao - outra.getMusica(indice).getDuraçao();
