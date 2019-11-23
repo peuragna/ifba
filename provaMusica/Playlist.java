@@ -28,8 +28,18 @@ public class Playlist{
     };
     
     public void removeMusica(int indice){
-        this.musicas[indice] = null;
-    }
+        Playlist aux = new Playlist(this.musicas.length - 1);
+        
+        for(int i = 0; i < indice; i++){
+            aux.musicas[i] = this.getMusica(i);
+        }
+        
+        for(int i = indice; i < aux.musicas.length; i++){
+            aux.musicas[i] = this.getMusica(i + 1);
+        }
+        
+        this.musicas = aux.musicas;
+    };
     
     public Playlist gerarPlaylist(Playlist outra, String nome, double duraçao){
         int indice;
