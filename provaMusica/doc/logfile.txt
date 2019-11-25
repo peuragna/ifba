@@ -1,0 +1,36 @@
+Class documentation
+<---- javadoc command: ---->
+javadoc
+-author
+-version
+-nodeprecated
+-package
+-Xdoclint:none
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+11
+-classpath
+/app/bluej/lib/bluejcore.jar:/app/bluej/lib/junit-4.11.jar:/app/bluej/lib/hamcrest-core-1.3.jar:/app/bluej/lib/lang-stride.jar:/app/bluej/lib/javafx/lib/javafx.base.jar:/app/bluej/lib/javafx/lib/javafx.controls.jar:/app/bluej/lib/javafx/lib/javafx.fxml.jar:/app/bluej/lib/javafx/lib/javafx.graphics.jar:/app/bluej/lib/javafx/lib/javafx.media.jar:/app/bluej/lib/javafx/lib/javafx.properties.jar:/app/bluej/lib/javafx/lib/javafx.swing.jar:/app/bluej/lib/javafx/lib/javafx.web.jar:/home/pedro/Documents/Ifba/gdxtest/libs+/gdx-setup.jar:/home/pedro/Documents/Ifba/provaMusica
+-d
+/home/pedro/Documents/Ifba/provaMusica/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+/home/pedro/Documents/Ifba/provaMusica/Run.java
+<---- end of javadoc command ---->
+Loading source file /home/pedro/Documents/Ifba/provaMusica/Run.java...
+Constructing Javadoc information...
+Standard Doclet version 11.0.5
+Building tree for all the packages and classes...
+Generating /home/pedro/Documents/Ifba/provaMusica/doc/Run.html...
+Generating /home/pedro/Documents/Ifba/provaMusica/doc/package-summary.html...
+Generating /home/pedro/Documents/Ifba/provaMusica/doc/constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating /home/pedro/Documents/Ifba/provaMusica/doc/allclasses.html...
+Generating /home/pedro/Documents/Ifba/provaMusica/doc/allclasses.html...
+Generating /home/pedro/Documents/Ifba/provaMusica/doc/index.html...

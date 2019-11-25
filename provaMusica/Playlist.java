@@ -7,6 +7,10 @@ public class Playlist{
         this.setNome(nome);
     };
     
+     public Playlist(String nome){
+        this(1, nome);
+    };
+    
      public Playlist(int tamanho){
         this(tamanho, "Standard");
     };
