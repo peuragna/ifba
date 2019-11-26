@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Atomo
+comment1.params=nome\ numeroAtomico\ numeroMassa
+comment1.target=Atomo(java.lang.String,\ int,\ int)
+comment2.params=nome
+comment2.target=void\ setNome(java.lang.String)
+comment3.params=numeroAtomico
+comment3.target=void\ setNumeroAtomico(int)
+comment4.params=numeroMassa
+comment4.target=void\ setNumeroMassa(int)
+comment5.params=
+comment5.target=java.lang.String\ getNome()
+comment6.params=
+comment6.target=int\ getNumeroAtomico()
+comment7.params=
+comment7.target=int\ getNumeroMassa()
+comment8.params=outro
+comment8.target=boolean\ equals(Atomo)
+comment9.params=camada
+comment9.target=int\ getEletronsCamada(int)
+numComments=10
