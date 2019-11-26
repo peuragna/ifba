@@ -2,4 +2,10 @@
 comment0.target=Molecula
 comment1.params=
 comment1.target=Atomo\ getMenor()
-numComments=2
+comment2.params=atomo
+comment2.target=int\ getNumAtomos(Atomo)
+comment3.params=outra
+comment3.target=boolean\ isPresente(Molecula)
+comment4.params=outra
+comment4.target=boolean\ isComposto(Molecula)
+numComments=5
