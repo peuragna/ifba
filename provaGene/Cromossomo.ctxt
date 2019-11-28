@@ -2,14 +2,14 @@
 comment0.target=Cromossomo
 comment1.params=qtdGenes
 comment1.target=Cromossomo(int)
-comment2.params=alelo\ valor
-comment2.target=void\ setGene(int,\ int)
+comment2.params=alelo\ gene
+comment2.target=void\ setGene(int,\ Gene)
 comment3.params=alelo
 comment3.target=Gene\ getGene(int)
 comment4.params=
 comment4.target=Cromossomo\ clonar()
 comment5.params=outro
-comment5.target=float\ calcularSimilaridade(Cromossomo)
+comment5.target=double\ getSimilaridade(Cromossomo)
 comment6.params=outro\ ponto
 comment6.target=void\ cruzar(Cromossomo,\ int)
 comment7.params=outro\ ponto

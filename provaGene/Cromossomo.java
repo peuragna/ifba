@@ -5,8 +5,8 @@ public class Cromossomo{
         this.genes = new Gene[qtdGenes];
     };
     
-    public void setGene(int alelo, int valor){
-       this.genes[alelo] = new Gene(valor);
+    public void setGene(int alelo, Gene gene){
+       this.genes[alelo] = gene;
     };
     
     public Gene getGene(int alelo){
@@ -15,29 +15,32 @@ public class Cromossomo{
     
     public Cromossomo clonar(){
         Cromossomo novo = new Cromossomo(this.genes.length);
-        int i;
         
-        for(i = 0; i < this.genes.length; i++)
-            novo.setGene(i, this.genes[i].getValor());
+        for(int i = 0; i < this.genes.length; i++)
+            novo.setGene(i, (this.getGene(i) != null) ?
+                             this.getGene(i).clonar() : 
+                             null);
             
         return novo;
     };
     
-    public float calcularSimilaridade(Cromossomo outro){
-        float count = 0;
+    public double getSimilaridade(Cromossomo outro){
+        double count = 0;
+        int max = this.genes.length > outro.genes.length ? this.genes.length : outro.genes.length;
         
-        for(int i = 0; i < this.genes.length; i++)
-            if((this.getGene(i).getValor() == 0 && outro.getGene(i).getValor() != 0) || 
-                (this.getGene(i).getValor() != 0 && outro.getGene(i).getValor() == 0));
-                count -= 2;
-                
-        for(int i = 0; i < this.genes.length; i++){
-            if(this.getGene(i).getValor() != 0)
-                if(this.getGene(i).equals(outro.getGene(i))){
-                    count += 1;
-                }else count -= 1;    
+        for(int i = 0; i < max; i++){
+            Gene meuGene = (i < this.genes.length) ? this.getGene(i) : null;
+            Gene outroGene = (i < outro.genes.length) ? outro.getGene(i) : null;
+            
+            if(meuGene == null || outroGene == null){
+                if(meuGene != null || outroGene != null)
+                    count -= 2;
+            }else if(meuGene.equals(outroGene))
+                count += 1;
+             else 
+                count -= 1;   
         }
-        return count;
+        return count / this.genes.length;
     }; 
     
     public void cruzar(Cromossomo outro, int ponto){
@@ -48,14 +51,16 @@ public class Cromossomo{
         this.genes = aux.genes;
     };
     
+    //Aplicar mesmo tratamento NULL!!
+    
     public Cromossomo cruzamento(Cromossomo outro, int ponto){
         Cromossomo novo = new Cromossomo(outro.genes.length);
         
         for(int i = 0; i < ponto; i++)
-            novo.setGene(i, this.getGene(i).getValor());
+            novo.setGene(i, this.getGene(i));
             
         for(int i = ponto; i < novo.genes.length; i++)
-            novo.setGene(i, outro.getGene(i).getValor());
+            novo.setGene(i, outro.getGene(i));
             
         return novo;   
     };

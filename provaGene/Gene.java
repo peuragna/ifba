@@ -9,10 +9,6 @@ public class Gene{
         this(gene.getValor());
     }; 
     
-    public Gene(){
-        this(1);
-    };
-      
     public void setValor(int valor){
         this.valor = valor;
     };
