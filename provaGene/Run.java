@@ -1,7 +1,7 @@
 public class Run{
-    private final int TAM1 = 5;
-    private final int TAM2 = 4;
-    private final int PONTO = 2;
+    private final int TAM1 = 10;
+    private final int TAM2 = 8;
+    private final int PONTO = 4;
     
     Cromossomo cromosso1 = new Cromossomo(TAM1);
     Cromossomo cromosso2 = new Cromossomo(TAM2);
@@ -9,10 +9,12 @@ public class Run{
     public void ex(){
         
         for(int i = 0; i < TAM1; i++)
-            cromosso1.setGene(i, i + 1);
+            cromosso1.setGene(i, new Gene(i + 1));
+            
+        //cromosso1.setGene(TAM1 - 1, null);
     
         for(int i = 0; i < TAM2; i++)
-            cromosso2.setGene(i, 9);
+            cromosso2.setGene(i, null);
         
         cromosso1.cruzar(cromosso2, PONTO);
         
