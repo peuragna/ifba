@@ -51,8 +51,6 @@ public class Cromossomo{
         this.genes = aux.genes;
     };
     
-    //Aplicar mesmo tratamento NULL!!
-    
     public Cromossomo cruzamento(Cromossomo outro, int ponto){
         Cromossomo novo = new Cromossomo(outro.genes.length);
         
