@@ -82,7 +82,7 @@ public class Musica{
     };
     
     public boolean equals(Musica outra){
-        if(!(this.titulo == outra.titulo)){
+        if(!(this.getTitulo().equals(outra.getTitulo()))){
             return false;
         }else if(this.comparar(outra.listaArtistas) && outra.comparar(this.listaArtistas))
             return true;
@@ -108,7 +108,7 @@ public class Musica{
     
     private float calcularPorcentagem(Musica outra){
           float qtdArtistas = this.listaArtistas.length + outra.listaArtistas.length;
-          float artistasCoincidentes = this.compararCount(outra.listaArtistas) + outra.compararCount(this.listaArtistas);
+            float artistasCoincidentes = this.compararCount(outra.listaArtistas) + outra.compararCount(this.listaArtistas);
           
           return qtdArtistas/artistasCoincidentes;
     };
