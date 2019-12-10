@@ -69,7 +69,7 @@ public class Musica{
         
         for(String artistas : this.listaArtistas){
             for(String artistas2 : outraLista){
-                if(artistas == artistas2)
+                if(artistas.equals(artistas2))
                     count++;
             }
         }
