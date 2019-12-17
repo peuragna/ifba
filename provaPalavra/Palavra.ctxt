@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Palavra
+comment1.params=conteudo
+comment1.target=Palavra(java.lang.String)
+comment10.params=texto
+comment10.target=double\ getMaior(Texto)
+comment2.params=conteudo\ outra
+comment2.target=Palavra(java.lang.String,\ Palavra)
+comment3.params=outra
+comment3.target=void\ addSimilar(Palavra)
+comment4.params=conteudo
+comment4.target=void\ setConteudo(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getConteudo()
+comment6.params=outra
+comment6.target=boolean\ equals(Palavra)
+comment7.params=outra
+comment7.target=boolean\ hasSimilaridade(Palavra)
+comment8.params=outra
+comment8.target=double\ countSimilares(Palavra)
+comment9.params=outra
+comment9.target=double\ getSimilaridade(Palavra)
+numComments=11
