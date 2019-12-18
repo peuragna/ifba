@@ -2,4 +2,6 @@
 comment0.target=Texto
 comment1.params=outro
 comment1.target=double\ getSimilaridade(Texto)
-numComments=2
+comment2.params=palavra
+comment2.target=double\ getMaior(Palavra)
+numComments=3

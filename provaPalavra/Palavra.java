@@ -10,7 +10,9 @@ public class Palavra{
     public Palavra(String conteudo, Palavra outra){
         this(conteudo);
         this.addSimilar(outra);
-        outra.addSimilar(this);
+        
+        for(Palavra outras : outra.similares)
+            this.addSimilar(outras);
     };
     
     public void addSimilar(Palavra outra){
@@ -60,20 +62,9 @@ public class Palavra{
             return 1;
         else if(outra.hasSimilaridade(this)){
                 nivel += 0.5;
-                nivel += this.countSimilares(outra) / 2*outra.countSimilares(this);
+                nivel += this.countSimilares(outra) / (2*this.similares.length);
             }
         
         return nivel;
     };
-    
-    public double getMaior(Texto texto){
-        double maior = 0;
-        
-        for(Palavra outras : texto.palavras)
-            if(this.getSimilaridade(outras) > maior)
-                maior = this.getSimilaridade(outras);
-        
-        return maior;
-    };
-   
 }

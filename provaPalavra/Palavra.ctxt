@@ -2,8 +2,6 @@
 comment0.target=Palavra
 comment1.params=conteudo
 comment1.target=Palavra(java.lang.String)
-comment10.params=texto
-comment10.target=double\ getMaior(Texto)
 comment2.params=conteudo\ outra
 comment2.target=Palavra(java.lang.String,\ Palavra)
 comment3.params=outra
@@ -20,4 +18,4 @@ comment8.params=outra
 comment8.target=double\ countSimilares(Palavra)
 comment9.params=outra
 comment9.target=double\ getSimilaridade(Palavra)
-numComments=11
+numComments=10

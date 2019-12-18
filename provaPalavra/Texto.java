@@ -5,12 +5,18 @@ public class Texto{
         double soma = 0;
         
         for(Palavra palavras : this.palavras)
-            soma += palavras.getMaior(outro);
+            soma += outro.getMaior(palavras);
         
         return soma/this.palavras.length;
     };
     
-
-    
-    
+      public double getMaior(Palavra palavra){
+        double maior = 0;
+        
+        for(Palavra outras : this.palavras)
+            if(palavra.getSimilaridade(outras) > maior)
+                maior = palavra.getSimilaridade(outras);
+        
+        return maior;
+    }; 
 }
