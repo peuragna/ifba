@@ -11,6 +11,12 @@ public class Conta{
         return this.numero;
     };
     
+    public void debitar(){
+    };
+    
+    public void creditar(){
+    };
+    
     public boolean equals(Object o){
         return this.getNumero() == ((Conta)o).getNumero();
     };
