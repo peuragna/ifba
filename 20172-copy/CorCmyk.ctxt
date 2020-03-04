@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=CorCmyk
+comment1.params=cyan\ magenta\ yellow\ key
+comment1.target=CorCmyk(int,\ int,\ int,\ int)
+comment2.params=
+comment2.target=int\ getCyan()
+comment3.params=
+comment3.target=int\ getMagenta()
+comment4.params=
+comment4.target=int\ getYellow()
+comment5.params=
+comment5.target=int\ getKey()
+comment6.params=
+comment6.target=int\ getLuminosidade()
+numComments=7

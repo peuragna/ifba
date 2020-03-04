@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=MapaCmyk
+comment1.params=altura\ largura
+comment1.target=MapaCmyk(int,\ int)
+comment2.params=cole\u00E7\u00E3o
+comment2.target=MapaCmyk(CorCmyk[][])
+numComments=3
