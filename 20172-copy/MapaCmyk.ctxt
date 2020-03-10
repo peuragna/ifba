@@ -4,4 +4,6 @@ comment1.params=altura\ largura
 comment1.target=MapaCmyk(int,\ int)
 comment2.params=cole\u00E7\u00E3o
 comment2.target=MapaCmyk(CorCmyk[][])
-numComments=3
+comment3.params=x\ y
+comment3.target=Pixel\ getPixel(int,\ int)
+numComments=4

@@ -22,6 +22,6 @@ public class CorRgb extends Pixel{
     };
     
     public int getLuminosidade(){
-        return (int)(this.getRed()*0.3 + this.getGreen()*0.59 + this.getBlue()*0.11)/255;
+        return (int)((this.getRed()*0.3) + (this.getGreen()*0.59) + (this.getBlue()*0.11)/255)*100;
     };
 }

@@ -21,22 +21,32 @@ public abstract class Mapa{
        return this.coleção.length;
    };
    
-   public Pixel getPixel(int x, int y){
-       return this.coleção[x][y];
-   };
+   public abstract Pixel getPixel(int x, int y);
    
    public void setPixel(int x, int y, Pixel p){
        this.coleção[x][y] = p;
    };
    
-   public int getMaiorSimilaridade(Fragmento f){
-       int maior = this.coleção[0][0].getSimilaridade(f.segmento[0][0]);
-        
-       for(int r = 0; r < f.getLargura(); r++)
-           for(int c = 0; c < f.getAltura(); c++)
-               if(this.coleção[r][c].getSimilaridade(f.segmento[r][c]) > maior)
-                   maior = this.coleção[r][c].getSimilaridade(f.segmento[r][c]);
-       return maior;
+   private double getSimilaridade(int x, int y, Fragmento f){
+       double similaridade = 0;
+       
+       for(int xCont = x, xFrag = 0; xCont < x + f.getAltura(); xCont++, xFrag++)
+            for(int yCont = y, yFrag = 0; yCont < y + f.getLargura(); yCont++, yFrag++)
+                similaridade += this.getPixel(xCont, yCont).getSimilaridade(f.getPixel(xFrag, yFrag));
+       similaridade/=(f.getAltura() * f.getLargura());
+       return similaridade;
+   };
+   
+   public double getSimilaridade(Fragmento f){
+       double similaridade = 0;
+       
+       for(int xCont = 0; xCont < this.getAltura() - f.getAltura(); xCont++)
+            for(int yCont = 0; yCont < this.getLargura() - f.getLargura(); yCont++){
+                double similaridadeAtual = this.getSimilaridade(xCont, yCont, f);
+                if(similaridadeAtual > similaridade)
+                    similaridade = similaridadeAtual;
+                }
+       return similaridade;
    }; 
 }
 
