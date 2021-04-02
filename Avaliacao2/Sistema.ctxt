@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Sistema
-comment1.params=
-comment1.target=Sistema()
-comment2.params=abcissa\ ordenada\ video\ termometro\ co2\ ch4
-comment2.target=java.lang.String\ monitorar(float,\ float,\ boolean,\ boolean,\ boolean,\ boolean)
-comment3.params=unidade
-comment3.target=void\ addUnidade(UnidadeMonitora)
-numComments=4
