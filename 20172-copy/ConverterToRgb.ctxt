@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=ConverterToRgb
-comment1.params=altura\ largura
-comment1.target=Mapa\ getNovoMapa(int,\ int)
-comment2.params=c
-comment2.target=Pixel\ converter(Pixel)
-numComments=3

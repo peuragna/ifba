@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=MapaRgb
-comment1.params=altura\ largura
-comment1.target=MapaRgb(int,\ int)
-comment2.params=cole\u00E7\u00E3o
-comment2.target=MapaRgb(CorRgb[][])
-comment3.params=x\ y
-comment3.target=Pixel\ getPixel(int,\ int)
-numComments=4
