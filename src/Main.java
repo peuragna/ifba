@@ -10,7 +10,7 @@ import org.fife.ui.rtextarea.RTextScrollPane;
 
 public class Main {
 	private static void createTextWindow(IFrame syntaxHighlighter, File file) throws Exception {
-		JFrame frame = new JFrame("Atividade1 App");
+		JFrame frame = new JFrame("Syntax Text Area");
 		JPanel panel = new JPanel(new BorderLayout());
 		RSyntaxTextArea textArea = syntaxHighlighter.createTextArea();
 		RTextScrollPane scrollPane = new RTextScrollPane(textArea);
